@@ -76,6 +76,7 @@ Modules - reusable parts of our design
 	max-width: $XL; // breakpoints inside partials > _layout.scss
 	margin: 0 auto;
 	@include clearfix;
+	position: relative;
 }
 
 /* -------------------------------- 

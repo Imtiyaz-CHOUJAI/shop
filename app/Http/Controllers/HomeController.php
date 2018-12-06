@@ -26,10 +26,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $shops = Shop::all();
+        $shops = Shop::with(['likes'])->get();
 
         JavaScript::put([
-            'shops' => $shops
+            'shops' => $shops,
+            'user' => \Auth::user()
         ]);
 
         return view('home');

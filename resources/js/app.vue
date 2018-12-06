@@ -11,7 +11,6 @@
         },
         components: {   
             ShopContainer: require('./components/ShopContainer.vue'),
-            // ShopDetails: require('./components/ShopDetails.vue'),
         }    
     }
 </script>

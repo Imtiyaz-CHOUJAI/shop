@@ -4,7 +4,13 @@ import VueRouter from 'vue-router'
 let routes = [
 	{
 		path : '/',
-		component: require('../app.vue')
+		component: require('../components/Shops.vue'),
+		name: 'all'
+	},
+	{
+		path: '/liked',
+		component: require('../components/Liked.vue'),
+		name: 'liked'
 	}
 ]
 

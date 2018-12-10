@@ -166,11 +166,6 @@ body::after {
   }
 }
 
-a {
-  color: #f82f53;
-  text-decoration: none;
-}
-
 img {
   max-width: 100%;
 }
@@ -186,6 +181,7 @@ Modules - reusable parts of our design
   width: 90%;
   max-width: 1170px;
   margin: 0 auto;
+  position: relative;
 }
 
 .cd-container::after {

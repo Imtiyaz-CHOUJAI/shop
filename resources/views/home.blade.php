@@ -9,6 +9,6 @@
         </div>
     @endif
 
-	<router-view></router-view>
+    <div id="shop-app"></div>
 </div>
 @endsection

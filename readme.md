@@ -16,7 +16,7 @@ This app is built using Laravel and vuejs, you will be required to run the follo
  
  3. Run seeders:
 
- `php artisan seed`
+ `php artisan db:seed`
  
  After you're done, you have successfully installed the app you can register an account and use the app.
 

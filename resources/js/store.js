@@ -1,14 +1,12 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
-
+import Vue from "vue";
+import Vuex from "vuex";
 
 Vue.use(Vuex);
-
 
 export default new Vuex.Store({
     // states
     state: {
-        campaigns: [],
+        campaigns: []
     },
     // mutations
     mutations: {
@@ -25,14 +23,12 @@ export default new Vuex.Store({
                 text: message,
                 icon: "warning",
                 // buttons: true,
-                dangerMode: true,
+                dangerMode: true
             });
         }
     },
     // getters
-    getters: {
-
-    },
+    getters: {},
     //actions
     actions: {}
-})
+});

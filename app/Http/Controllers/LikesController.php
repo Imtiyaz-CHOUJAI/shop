@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Shop;
 use App\Like;
+use App\Dislike;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\Auth;
 
@@ -51,5 +52,15 @@ class LikesController extends Controller
         } catch (ModelNotFoundException $e) {
             throw $e;
         }
+    }
+
+    /**
+     * Dislike Shop.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function disLikeShop($id) {
+        // @Todo
     }
 }

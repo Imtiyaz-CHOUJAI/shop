@@ -2,9 +2,8 @@
 
 namespace App;
 
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
@@ -32,7 +31,12 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Like');
     }
-    
+
+    public function dislikes()
+    {
+        return $this->hasMany('App\Dislike');
+    }
+
     public function shops()
     {
         return $this->hasMany('App\Shop');

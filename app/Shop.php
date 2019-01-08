@@ -10,8 +10,14 @@ class Shop extends Model
     {
         return $this->belongsTo('App\User', 'user_id', 'id');
     }
+    
     public function likes()
     {
         return $this->hasMany('App\Like', 'shop_id', 'id');
+    }
+
+    public function dislikes()
+    {
+        return $this->hasMany('App\dislike', 'shop_id', 'id');
     }
 }

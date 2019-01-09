@@ -18,7 +18,17 @@ This app is built using Laravel and vuejs, you will be required to run the follo
 
  `php artisan db:seed`
  
- After you're done, you have successfully installed the app you can register an account and use the app.
+ After you're done, you have successfully installed the app.
+ 
+ You will be required to serve the app in order to use it, you will need to run folowing commands:
+ 
+ 1. Build the assets:
+ 
+ `npm run dev`
+ 
+ 2. Start php server:
+ 
+ `php artisan serve`
 
 ## About Laravel
 

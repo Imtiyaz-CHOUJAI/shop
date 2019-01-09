@@ -21,23 +21,35 @@
   transform: translateY(-2px) scale(1.1);
 }
 .liked {
-  color: #db5461 !important;
+  color: #ce0014 !important;
 }
 </style>
 
 <template>
   <li class="cd-item" v-if="(!likesPage && !liked) || likesPage">
-    <img src="img/item-1.jpg" alt="Item Preview">
+    <img :src="`img/${shop.image}`" alt="Item Preview">
     
-    <a @click="like()" href="#" class="like-shop" :class="{'liked': liked}">
+    <a
+      @click="like()"
+      href="javascript:;"
+      class="like-shop"
+      :class="{'liked': liked}"
+      title="Like Shop"
+    >
       <i class="fas fa-heart"></i>
     </a>
     
-    <a @click="dislike()" href="#" class="dislike-shop">
+    <a
+      @click="dislike()"
+      v-if="!likesPage"
+      href="javascript:;"
+      class="dislike-shop"
+      title="Dislike Shop"
+    >
       <i class="fas fa-heart-broken"></i>
     </a>
     
-    <a href="#" class="cd-trigger">{{ shop.name }}</a>
+    <a href="javascript:;" class="cd-trigger">{{ shop.name }}</a>
   </li>
 </template>
 
@@ -74,7 +86,7 @@ export default {
   },
   methods: {
     like() {
-      if (!liked) {
+      if (!this.liked) {
         axios
           .post(`/shop/like/${this.shop.id}`)
           .then(response => {
@@ -86,7 +98,7 @@ export default {
       }
     },
     dislike() {
-      if (!disliked) {
+      if (!this.disliked) {
         axios
           .post(`/shop/dislike/${this.shop.id}`)
           .then(response => {

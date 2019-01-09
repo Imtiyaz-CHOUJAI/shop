@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\User;
 use App\Shop;
+use App\User;
 use JavaScript;
 
 class HomeController extends Controller
@@ -26,11 +25,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $shops = Shop::with(['likes'])->get();
+        $shops = Shop::with(['likes'])->orderBy('distance', 'ASC')->get();
 
         JavaScript::put([
             'shops' => $shops,
-            'user' => \Auth::user()
+            'user' => \Auth::user(),
         ]);
 
         return view('home');

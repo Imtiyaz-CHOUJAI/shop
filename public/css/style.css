@@ -315,6 +315,11 @@ header h1 {
   transition: opacity 0.2s, background-color 0.2s;
 }
 
+.cd-trigger:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 .no-touch .cd-trigger:hover {
   background: rgba(0, 0, 0, 0.2);
 }

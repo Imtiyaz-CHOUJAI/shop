@@ -7,5 +7,6 @@ $factory->define(App\Shop::class, function (Faker $faker) {
         'name' => $faker->word,
         'description' => $faker->paragraph,
         'distance' => $faker->randomDigit,
+        'image' => $faker->randomElement(['item-1.jpg', 'item-2.jpg', 'item-3.jpg'])
     ];
 });

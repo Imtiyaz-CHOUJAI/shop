@@ -44,9 +44,8 @@ class LikesController extends Controller
                     $existing_like->restore();
                 }
             }
+
             $shop = Shop::with('likes')->findOrFail($id);
-            // $shop = Shop::with(['likes'])->findorfail($id)->get();
-            
             return $shop;
 
         } catch (ModelNotFoundException $e) {

@@ -1,10 +1,19 @@
+<style>
+.no-liked-shops {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
+</style>
+
 <template>
-  <div>Liked shops to display here
-    <div>
-      <ul class="cd-items cd-container">
-        <shop v-for="shop in likedShops" :key="shop.id" :shop="shop" :likesPage="true"></shop>
-      </ul>
-    </div>
+  <div>
+    <div v-if="!likedShops" class="no-liked-shops">You have no preferred shops</div>
+    <ul class="cd-items cd-container" v-else>
+      <shop v-for="shop in likedShops" :key="shop.id" :shop="shop" :likesPage="true"></shop>
+    </ul>
   </div>
 </template>
 <script>

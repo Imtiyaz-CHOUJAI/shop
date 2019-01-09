@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Database\Seeder;
 use App\Shop;
+use Illuminate\Database\Seeder;
 
 class ShopsTableSeeder extends Seeder
 {
@@ -18,7 +18,8 @@ class ShopsTableSeeder extends Seeder
             Shop::create([
                 'name' => $faker->word,
                 'description' => $faker->paragraph,
-                'distance' => $faker->randomDigit
+                'distance' => $faker->randomDigit,
+                'image' => $faker->randomElement(['item-1.jpg', 'item-2.jpg', 'item-3.jpg']),
             ]);
         }
     }

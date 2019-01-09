@@ -183,6 +183,11 @@ header {
     visibility: hidden;
     @include transition(opacity 0.2s, background-color 0.2s);
 
+    &:hover {
+        color: $color-4;
+        text-decoration: underline;
+    }
+
     .no-touch &:hover {
         background: rgba(#000, 0.2);
     }

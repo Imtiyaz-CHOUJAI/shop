@@ -6,7 +6,7 @@ This app is built using Laravel and vuejs, you will be required to run the follo
 
  `composer install`
 
-3. Run the following command:
+3. Install Packages:
 
  `npm install`
 
@@ -14,21 +14,16 @@ This app is built using Laravel and vuejs, you will be required to run the follo
 
  `php artisan migrate`
  
- 3. Run seeders:
+ 4. Run seeders:
 
  `php artisan db:seed`
  
+ 5. Build the assets:
+  
+  `npm run dev`
+ 
  After you're done, you have successfully installed the app.
- 
- You will be required to serve the app in order to use it, you will need to run folowing commands:
- 
- 1. Build the assets:
- 
- `npm run dev`
- 
- 2. Start php server:
- 
- `php artisan serve`
+
 
 ## About Laravel
 
